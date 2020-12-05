@@ -6,18 +6,18 @@
 
 -- dcache
 
-`"size": 65536,`
+`"size": 65536,` # 64KB
 `"assoc": 2,`
 
 -- icache
 
-`"size": 32768,`
+`"size": 32768,` # 32kB
 `"assoc": 2,`
 
 - l2
 
 `"assoc": 8,`
-`"size": 2097152,`
+`"size": 2097152,` # 2048 kB
 
 - Μεγεθος cache line
 
@@ -96,30 +96,34 @@ system.l2.overall_miss_rate::total           0.067664                       # mi
 
 -- Χρόνος εκτέλεσης
 
-``
+`sim_seconds                                  0.118517                       # Number of seconds simulated`
 
 -- CPI
 
-``
+`system.cpu.cpi                               1.185174                       # CPI: cycles per instruction`
 
 -- Overall Miss Rates
 
 --- dcache
 
 ```
-
+system.cpu.dcache.overall_misses::.cpu.data        71108                       # number of overall misses
+system.cpu.dcache.overall_misses::total         71108                       # number of overall misses
 ```
 
 --- icache
 
 ```
-
+system.cpu.icache.overall_misses::.cpu.inst         3662                       # number of overall misses
+system.cpu.icache.overall_misses::total          3662                       # number of overall misses
 ```
 
 --- l2
 
 ```
-
+system.l2.overall_misses::.cpu.inst              1299                       # number of overall misses
+system.l2.overall_misses::.cpu.data              4192                       # number of overall misses
+system.l2.overall_misses::total                  5491                       # number of overall misses
 ```
 
 - specsjeng
@@ -259,9 +263,13 @@ system.cpu_clk_domain.clock                       500                       # Cl
 
 - spechmmer
 
-1) ``
+1) `sim_seconds                                  0.118517                       # Number of seconds simulated`
 
-2) ``
+2) `sim_seconds                                  0.059390                       # Number of seconds simulated`
+
+`0.118517 ÷ 0.059390  = 1,995571645`
+Το οποίο, ενώ είναι απίστευτα κοντά,  δεν είναι ακριβώς 2.
+Αυτό συμβαίνει διότι στο χρόνο εκτέλεσης δεν παίζει ρόλο μόνο το ρολόι του επεξεργαστή, αλλά και ο χρόνο απόκρισης της μνήμης η οποία διατηρείται ίδια και στα δύο πειράματα.
 
 - speclibm
 
