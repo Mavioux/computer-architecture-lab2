@@ -462,7 +462,7 @@ system.cpu_clk_domain.clock                       500                       # Cl
 
 
 
-![image](./graphs/spemcf.png "Specmcf")
+![image](./graphs/specmcf.png "Specmcf")
 
 
 
