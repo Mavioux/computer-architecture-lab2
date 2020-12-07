@@ -454,17 +454,27 @@ system.cpu_clk_domain.clock                       500                       # Cl
 
 Από όλα τα παραπάνω καταλήγουμε στο συμπέρασμα ότι κάθε benchmark επωφελείται από διαφορετική αλλαγή στα χαρακτηριστικά, ανάλογα με τον διεργασία που κάνει. Για αυτό και δεν υπάρχει μια καθολική αλλαγή ή συνδυασμός τιμών που θα δίνει πάντα το βέλτιστο αποτέλεσμα σε όλα τα benchmarks. Ακόμη, μια αλλαγή που θα οδηγήσει σε τεράστια βελτίωση σε ένα benchmark συνήθως θα οδηγήσει σε μεγάλη απώλεια σε ένα άλλο (π.χ. στις παραπάνω προσομοιώσεις η αλλαγή του μεγέθους cachelinesize σε 32, είχε φοβερή βελτίωση στο specjeng, αλλά χειρότερη επίδοση σε κάθε άλλο benchmark). Για αυτό το λόγο κάθε αλλαγή θα πρέπει να παρατηρείται καθολικά και όχι μεμονωμένα για κάθε benchmark.
 
-Specbzip
+
+
+
 ![image](./graphs/specbzip.png "Specbzip")
 
-Specmcf
+
+
+
 ![image](./graphs/spemcf.png "Specmcf")
 
-Spechmmer
+
+
+
 ![image](./graphs/spechmmer.png "Spechmmer")
 
-Specsjeng
+
+
+
 ![image](./graphs/specsjeng.png "Specsjeng")
 
-Speclibm
+
+
+
 ![image](./graphs/speclibm.png "Speclibm")
