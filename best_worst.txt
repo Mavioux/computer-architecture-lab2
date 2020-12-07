@@ -1,0 +1,42 @@
+BEST THREE OPTIONS for specmcf:
+Benchmark Number	l1_dsize (kB)	l1_icache (kB)	l2_size (kB)	l1d_assoc	l1i_assoc	l2_assoc	cacheline_size	cpi
+5 	64	64	2048	2	2	8	64	1.117925
+10	64	32	2048	4	4	8	64	1.117517
+18	64	64	1024	2	2	8	64	1.120746
+WORST OPTION for specmcf:
+6 	64	32	2048	1	1	8	64	1.327047
+
+
+BEST THREE OPTIONS for specsjeng:
+Benchmark Number	l1_dsize (kB)	l1_icache (kB)	l2_size (kB)	l1d_assoc	l1i_assoc	l2_assoc	cacheline_size	cpi
+17	64	32	2048	2	2	8	32	1.665655
+13	64	32	2048	2	2	8	128	4.984822
+3	64	32	2048	2	2	2	64	7.054192
+WORST OPTION for specsjeng:
+1	64	32	2048	2	2	8	64	10.27646
+
+BEST THREE OPTIONS for speclibm:
+Benchmark Number	l1_dsize (kB)	l1_icache (kB)	l2_size (kB)	l1d_assoc	l1i_assoc	l2_assoc	cacheline_size	cpi
+16	64	32	2048	2	2	8	128	1.989979
+15	32	32	1024	1	1	2	64	2.604773
+13	32	32	512	1	1	2	64	2.621863
+WORST OPTION for speclibm:
+20	64	32	2048	2	2	8	32	3.920660
+
+BEST THREE OPTIONS for specbzip:
+Benchmark Number	l1_dsize (kB)	l1_icache (kB)	l2_size (kB)	l1d_assoc	l1i_assoc	l2_assoc	cacheline_size	cpi
+9	128	32	2048	2	2	8	64	1.57628
+10	64	32	2048	4	4	8	64	1.5952
+13	  64	32	2048	2	2	8	128	1.5965
+WORST OPTION for specbzip:
+18	  64	32	2048	2	2	8	32	1.7007788
+
+BEST THREE OPTIONS for spechmmer:
+Benchmark Number	l1_dsize (kB)	l1_icache (kB)	l2_size (kB)	l1d_assoc	l1i_assoc	l2_assoc	cacheline_size	cpi
+11	64	32	2048	2	2	8	128	1.180157
+3	64	32	2048	2	2	2	64	1.185174
+2	64	32	512	2	2	8	64	1.185174
+13	  64	32	2048	2	2	8	128	1.5965
+WORST OPTION for spechmmer:
+4	  64	64	2048	2	2	8	64	6.69604
+15    32	32	2048	2	2	8	64	6.718416
