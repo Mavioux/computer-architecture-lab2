@@ -36,7 +36,6 @@ Benchmark Number	l1_dsize (kB)	l1_icache (kB)	l2_size (kB)	l1d_assoc	l1i_assoc	l
 11	64	32	2048	2	2	8	128	1.180157
 3	64	32	2048	2	2	2	64	1.185174
 2	64	32	512	2	2	8	64	1.185174
-13	  64	32	2048	2	2	8	128	1.5965
 WORST OPTION for spechmmer:
 4	  64	64	2048	2	2	8	64	6.69604
 15    32	32	2048	2	2	8	64	6.718416
