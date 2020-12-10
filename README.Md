@@ -1,4 +1,19 @@
-1)Κοιτάζοντας το αρχείο config.json για το specbzip καταγράφουμε:
+# Αρχιτεκτονική Υπολογιστών
+## Μάριος Πάκας 9498
+## Κοσμάς Μέτα 9390
+### Εργαστήριο 2
+
+### Περιεχόμενα
+   1. Βήμα 1ο
+      1. Εύρεση παραμέτρων
+      2. Καταγραφή αποτελεσμάτων
+      3. Προσομοιώσης με αλλαγή CPU
+   2. Βήμα 2ο
+   3. Βήμα 3ο
+
+## Βήμα 1ο
+
+1) Κοιτάζοντας το αρχείο config.json για το specbzip καταγράφουμε:
 
 ### Μεγέθη των caches  
 - l1
@@ -200,51 +215,51 @@
 - specmcf
 - specsjeng
 
-1) 
+   1) 
 
-```
-system.cpu_clk_domain.clock                      1000                       # Clock period in ticks
-system.cpu_clk_domain.clock                      1000                       # Clock period in ticks
-```
+   ```
+   system.cpu_clk_domain.clock                      1000                       # Clock period in ticks
+   system.cpu_clk_domain.clock                      1000                       # Clock period in ticks
+   ```
 
-Από το config.json
+   Από το config.json
 
-```
-"clk_domain": {
-            "clock": [
-                1000
-            ],
+   ```
+   "clk_domain": {
+               "clock": [
+                   1000
+               ],
 
-"cpu_clk_domain": {
-            "clock": [
-                1000
-            ],
-```
+   "cpu_clk_domain": {
+               "clock": [
+                   1000
+               ],
+   ```
 
-2)
+   2)
 
-```
-system.clk_domain.clock                          1000                       # Clock period in ticks
-system.cpu_clk_domain.clock                       500                       # Clock period in ticks
-```
+   ```
+   system.clk_domain.clock                          1000                       # Clock period in ticks
+   system.cpu_clk_domain.clock                       500                       # Clock period in ticks
+   ```
 
-Από το config.json
+   Από το config.json
 
-```
-"clk_domain": {
-            "clock": [
-                1000
-            ],
+   ```
+   "clk_domain": {
+               "clock": [
+                   1000
+               ],
 
-"cpu_clk_domain": {
-            "clock": [
-                500
-            ],
-```
+   "cpu_clk_domain": {
+               "clock": [
+                   500
+               ],
+   ```
 
-Με τον αριθμό 1 είναι τα δεδομένα που παίρνουμε για το ρολόι με την εντολή
+Με τον αριθμό (i) είναι τα δεδομένα που παίρνουμε για το ρολόι με την εντολή
 `--cpu-clock=1GHz`
-Με τον αριθμό 2 είναι τα δεδομένα που παίρνουμε για το ρολόι με την εντολή
+Με τον αριθμό (ii) είναι τα δεδομένα που παίρνουμε για το ρολόι με την εντολή
 `--cpu-clock=2GHz`
 
 Για τους χρόνους εκτέλεσης:
@@ -311,7 +326,7 @@ system.cpu_clk_domain.clock                       500                       # Cl
 - Δεν υπάρχει ιδανικό-τέλειο scaling στον πραγματικό κόσμο. Σε αυτό οφείλονται και οι αποκλίσεις που προκύπτουν.
 
 
-## Βήμα 2
+## Βήμα 2ο
 
 Το συγκεκριμένο βήμα υλοποιήθηκε με την χρήση δύο scripts. Συγκρεκριμένα, χρησιμοποιήθηκαν scripts που έτρεξαν αρκετές προσομοιώσεις για κάθε ένα benchmark και έπειτα συλλέξαμε τα δεδομένα όπως φαίνεται παρακάτω.
 
@@ -485,3 +500,8 @@ system.cpu_clk_domain.clock                       500                       # Cl
 
 
 ![image](./graphs/speclibm.png "Speclibm")
+
+
+## Βήμα 3ο
+
+# todo
