@@ -2,193 +2,196 @@
 
 ### Μεγέθη των caches  
 - l1
-   + dcache  
+   - dcache  
 
-    `"size": 65536,` # 64KB
+    `"size": 65536,` # 64KB  
     `"assoc": 2,`  
-   + icache
+   - icache
 
-    `"size": 32768,` # 32kB
+    `"size": 32768,` # 32kB  
     `"assoc": 2,`  
 - l2
 
-    `"assoc": 8,`
+    `"assoc": 8,`  
     "size": 2097152,` # 2048 kB  
 
 - Μεγεθος cache line
 
-    `"cache_line_size": 64,`
+    `"cache_line_size": 64,`  
 
 2) Αποτελέσματα για κάθε simulation
 
 - specbzip
 
--- Χρόνος εκτέλεσης
+  - Χρόνος εκτέλεσης  
+  
+   `sim_seconds                                  0.083654                       # Number of seconds simulated`
 
-`sim_seconds                                  0.083654                       # Number of seconds simulated`
+  - CPI
 
--- CPI
+   `system.cpu.cpi                               1.673085                       # CPI: cycles per instruction`
 
-`system.cpu.cpi                               1.673085                       # CPI: cycles per instruction`
+  - Overall Miss Rates
 
--- Overall Miss Rates
+     - dcache
+ 
+      ```
+      system.cpu.dcache.overall_miss_rate::.cpu.data     0.014312                       # miss rate for overall accesses
+      system.cpu.dcache.overall_miss_rate::total     0.014312                       # miss rate for overall accesses
+      ```
+       
+     - icache
+    
+      ```
+      system.cpu.icache.overall_miss_rate::.cpu.inst     0.000075                       # miss rate for overall accesses
+      system.cpu.icache.overall_miss_rate::total     0.000075                       # miss rate for overall accesses
+      ```
 
---- dcache
+     - l2
 
-```
-system.cpu.dcache.overall_miss_rate::.cpu.data     0.014312                       # miss rate for overall accesses
-system.cpu.dcache.overall_miss_rate::total     0.014312                       # miss rate for overall accesses
-```
-
---- icache
-
-```
-system.cpu.icache.overall_miss_rate::.cpu.inst     0.000075                       # miss rate for overall accesses
-system.cpu.icache.overall_miss_rate::total     0.000075                       # miss rate for overall accesses
-```
-
---- l2
-
-```
-system.l2.overall_miss_rate::.cpu.inst       0.868047                       # miss rate for overall accesses
-system.l2.overall_miss_rate::.cpu.data       0.294599                       # miss rate for overall accesses
-system.l2.overall_miss_rate::total           0.295247                       # miss rate for overall accesses
-```
+      ```
+      system.l2.overall_miss_rate::.cpu.inst       0.868047                       # miss rate for overall accesses
+      system.l2.overall_miss_rate::.cpu.data       0.294599                       # miss rate for overall accesses
+      system.l2.overall_miss_rate::total           0.295247                       # miss rate for overall accesses
+      ```
 
 - specmcf
 
--- Χρόνος εκτέλεσης
+  - Χρόνος εκτέλεσης
+  
+   `sim_seconds                                  0.062472                       # Number of seconds simulated`
 
-`sim_seconds                                  0.062472                       # Number of seconds simulated`
+  - CPI
 
--- CPI
+   `system.cpu.cpi                               1.249432                       # CPI: cycles per instruction`
+   
+  - Overall Miss Rates
 
-`system.cpu.cpi                               1.249432                       # CPI: cycles per instruction`
--- Overall Miss Rates
+     - dcache
 
---- dcache
+      ```
+      system.cpu.dcache.overall_miss_rate::.cpu.data     0.002113                       # miss rate for overall accesses
+      system.cpu.dcache.overall_miss_rate::total     0.002113                       # miss rate for overall accesses
+      ```
 
-```
-system.cpu.dcache.overall_miss_rate::.cpu.data     0.002113                       # miss rate for overall accesses
-system.cpu.dcache.overall_miss_rate::total     0.002113                       # miss rate for overall accesses
-```
+     - icache
 
---- icache
+      ```
+      system.cpu.icache.overall_miss_rate::.cpu.inst     0.019032                       # miss rate for overall accesses
+      system.cpu.icache.overall_miss_rate::total     0.019032                       # miss rate for overall accesses
+      ```
 
-```
-system.cpu.icache.overall_miss_rate::.cpu.inst     0.019032                       # miss rate for overall accesses
-system.cpu.icache.overall_miss_rate::total     0.019032                       # miss rate for overall accesses
-```
+      - l2
 
---- l2
-
-```
-system.l2.overall_miss_rate::.cpu.inst       0.000974                       # miss rate for overall accesses
-system.l2.overall_miss_rate::.cpu.data       0.728013                       # miss rate for overall accesses
-system.l2.overall_miss_rate::total           0.067664                       # miss rate for overall accesses
-```
+      ```
+      system.l2.overall_miss_rate::.cpu.inst       0.000974                       # miss rate for overall accesses
+      system.l2.overall_miss_rate::.cpu.data       0.728013                       # miss rate for overall accesses
+      system.l2.overall_miss_rate::total           0.067664                       # miss rate for overall accesses
+      ```
 
 - spechmmer
 
--- Χρόνος εκτέλεσης
+  - Χρόνος εκτέλεσης
 
-`sim_seconds                                  0.118517                       # Number of seconds simulated`
+   `sim_seconds                                  0.118517                       # Number of seconds simulated`
 
--- CPI
+  - CPI
 
-`system.cpu.cpi                               1.185174                       # CPI: cycles per instruction`
+   `system.cpu.cpi                               1.185174                       # CPI: cycles per instruction`
 
--- Overall Miss Rates
+  - Overall Miss Rates
 
---- dcache
+     - dcache
 
-```
-system.cpu.dcache.overall_misses::.cpu.data        71108                       # number of overall misses
-system.cpu.dcache.overall_misses::total         71108                       # number of overall misses
-```
+      ```
+      system.cpu.dcache.overall_misses::.cpu.data        71108                       # number of overall misses
+      system.cpu.dcache.overall_misses::total         71108                       # number of overall misses
+      ```
 
---- icache
+     - icache
 
-```
-system.cpu.icache.overall_misses::.cpu.inst         3662                       # number of overall misses
-system.cpu.icache.overall_misses::total          3662                       # number of overall misses
-```
+      ```
+      system.cpu.icache.overall_misses::.cpu.inst         3662                       # number of overall misses
+      system.cpu.icache.overall_misses::total          3662                       # number of overall misses
+      ```
 
---- l2
+     - l2
 
-```
-system.l2.overall_misses::.cpu.inst              1299                       # number of overall misses
-system.l2.overall_misses::.cpu.data              4192                       # number of overall misses
-system.l2.overall_misses::total                  5491                       # number of overall misses
-```
+      ```
+      system.l2.overall_misses::.cpu.inst              1299                       # number of overall misses
+      system.l2.overall_misses::.cpu.data              4192                       # number of overall misses
+      system.l2.overall_misses::total                  5491                       # number of overall misses
+      ```
 
 - specsjeng
 
--- Χρόνος εκτέλεσης
+  - Χρόνος εκτέλεσης
 
-`sim_seconds                                  0.513823                       # Number of seconds simulated`
+   `sim_seconds                                  0.513823                       # Number of seconds simulated`
 
--- CPI
+  - CPI
 
-`system.cpu.cpi                              10.276466                       # CPI: cycles per instruction`
+   `system.cpu.cpi                              10.276466                       # CPI: cycles per instruction`
 
--- Overall Miss Rates
+  - Overall Miss Rates
 
---- dcache
+     - dcache
 
-```
-system.cpu.dcache.overall_miss_rate::.cpu.data     0.121831                       # miss rate for overall accesses
-system.cpu.dcache.overall_miss_rate::total     0.121831                       # miss rate for overall accesses
-```
+      ```
+      system.cpu.dcache.overall_miss_rate::.cpu.data     0.121831                       # miss rate for overall accesses
+      system.cpu.dcache.overall_miss_rate::total     0.121831                       # miss rate for overall accesses
+      ```
 
---- icache
+     - icache
 
-```
-system.cpu.icache.overall_miss_rate::.cpu.inst     0.000020                       # miss rate for overall accesses
-system.cpu.icache.overall_miss_rate::total     0.000020                       # miss rate for overall accesses
-```
+      ```
+      system.cpu.icache.overall_miss_rate::.cpu.inst     0.000020                       # miss rate for overall accesses
+      system.cpu.icache.overall_miss_rate::total     0.000020                       # miss rate for overall accesses
+      ```
 
---- l2
+     - l2
 
-```
-system.l2.overall_miss_rate::.cpu.inst       0.918877                       # miss rate for overall accesses
-system.l2.overall_miss_rate::.cpu.data       0.999988                       # miss rate for overall accesses
-system.l2.overall_miss_rate::total           0.999978                       # miss rate for overall accesses
-```
+      ```
+      system.l2.overall_miss_rate::.cpu.inst       0.918877                       # miss rate for overall accesses
+      system.l2.overall_miss_rate::.cpu.data       0.999988                       # miss rate for overall accesses
+      system.l2.overall_miss_rate::total           0.999978                       # miss rate for overall accesses
+      ```
 
 - speclibm
 
--- Χρόνος εκτέλεσης
+  - Χρόνος εκτέλεσης
 
-`sim_seconds                                  0.174763                       # Number of seconds simulated`
+   `sim_seconds                                  0.174763                       # Number of seconds simulated`
 
--- CPI
+  - CPI
 
-`system.cpu.cpi                               3.495270                       # CPI: cycles per instruction`
+   `system.cpu.cpi                               3.495270                       # CPI: cycles per instruction`
 
--- Overall Miss Rates
+  - Overall Miss Rates
 
---- dcache
+     - dcache
 
-```
-system.cpu.dcache.overall_miss_rate::.cpu.data     0.060972                       # miss rate for overall accesses
-system.cpu.dcache.overall_miss_rate::total     0.060972                       # miss rate for overall accesses
-```
+      ```
+      system.cpu.dcache.overall_miss_rate::.cpu.data     0.060972                       # miss rate for overall accesses
+      system.cpu.dcache.overall_miss_rate::total     0.060972                       # miss rate for overall accesses
+      ```
 
---- icache
+     - icache
 
-```
-system.cpu.icache.overall_miss_rate::.cpu.inst     0.000095                       # miss rate for overall accesses
-system.cpu.icache.overall_miss_rate::total     0.000095                       # miss rate for overall accesses
-```
+      ```
+      system.cpu.icache.overall_miss_rate::.cpu.inst     0.000095                       # miss rate for overall accesses
+      system.cpu.icache.overall_miss_rate::total     0.000095                       # miss rate for overall accesses
+      ```
 
---- l2
+     - l2
 
-```
-system.l2.overall_miss_rate::.cpu.inst       0.867826                       # miss rate for overall accesses
-system.l2.overall_miss_rate::.cpu.data       0.999991                       # miss rate for overall accesses
-system.l2.overall_miss_rate::total           0.999940                       # miss rate for overall accesses
-```
+      ```
+      system.l2.overall_miss_rate::.cpu.inst       0.867826                       # miss rate for overall accesses
+      system.l2.overall_miss_rate::.cpu.data       0.999991                       # miss rate for overall accesses
+      system.l2.overall_miss_rate::total           0.999940                       # miss rate for overall accesses
+      ```
+      
+# todo ΓΡΑΦΗΜΑΤΑ
 
 3) Έχοντας πλέον τρέξει την προσομοίωση και για --cpu-clock=2GHz συγκρίνουμε τις πληροφορίες για το ρολόι στο stats.txt
 
@@ -248,61 +251,69 @@ system.cpu_clk_domain.clock                       500                       # Cl
 
 - specbzip
 
-1) `sim_seconds                                  0.160359                       # Number of seconds simulated`
+   1) `sim_seconds                                  0.160359                       # Number of seconds simulated`
 
-2) `sim_seconds                                  0.083654                       # Number of seconds simulated`
+   2) `sim_seconds                                  0.083654                       # Number of seconds simulated`
 
-`0.160359 ÷ 0.083654 = 1,9169`
+   `0.160359 ÷ 0.083654 = 1,9169`  
 
 Το οποίο ενώ είναι αρκετά κοντά στον λόγο των δύο χρονισμών, δεν είναι ακριβώς 2.
 Αυτό συμβαίνει διότι στο χρόνο εκτέλεσης δεν παίζει ρόλο μόνο το ρολόι του επεξεργαστή, αλλά και ο χρόνο απόκρισης της μνήμης η οποία διατηρείται ίδια και στα δύο πειράματα.
 
 - spechmmer
 
-1) `sim_seconds                                  0.118517                       # Number of seconds simulated`
+   1) `sim_seconds                                  0.118517                       # Number of seconds simulated`
 
-2) `sim_seconds                                  0.059390                       # Number of seconds simulated`
+   2) `sim_seconds                                  0.059390                       # Number of seconds simulated`
 
-`0.118517 ÷ 0.059390  = 1,995571645`
+   `0.118517 ÷ 0.059390  = 1,995571645`  
+   
 Το οποίο, ενώ είναι απίστευτα κοντά,  δεν είναι ακριβώς 2.
 Αυτό συμβαίνει διότι στο χρόνο εκτέλεσης δεν παίζει ρόλο μόνο το ρολόι του επεξεργαστή, αλλά και ο χρόνο απόκρισης της μνήμης η οποία διατηρείται ίδια και στα δύο πειράματα.
 
 - speclibm
 
-1) `sim_seconds                                  0.262262                       # Number of seconds simulated`
+   1) `sim_seconds                                  0.262262                       # Number of seconds simulated`
 
-2) `sim_seconds                                  0.174763                       # Number of seconds simulated`
+   2) `sim_seconds                                  0.174763                       # Number of seconds simulated`
 
-`0.262262 ÷ 0.174763 = 1,500672339`
+   `0.262262 ÷ 0.174763 = 1,500672339`  
 
 Το οποίο απέχει αρκετά από τον λόγο των δύο χρονισμών.
 Αυτό συμβαίνει διότι στο χρόνο εκτέλεσης δεν παίζει ρόλο μόνο το ρολόι του επεξεργαστή, αλλά και ο χρόνο απόκρισης της μνήμης η οποία διατηρείται ίδια και στα δύο πειράματα.
 
 - specmcf
 
-1) `sim_seconds                                  0.123107                       # Number of seconds simulated`
+   1) `sim_seconds                                  0.123107                       # Number of seconds simulated`
 
-2) `sim_seconds                                  0.062553                       # Number of seconds simulated`
+   2) `sim_seconds                                  0.062553                       # Number of seconds simulated`
 
-`0.123107 ÷ 0.062553 = 1,968043099`
+   `0.123107 ÷ 0.062553 = 1,968043099`  
 
 Το οποίο ενώ είναι αρκετά κοντά στον λόγο των δύο χρονισμών, δεν είναι ακριβώς 2.
 Αυτό συμβαίνει διότι στο χρόνο εκτέλεσης δεν παίζει ρόλο μόνο το ρολόι του επεξεργαστή, αλλά και ο χρόνο απόκρισης της μνήμης η οποία διατηρείται ίδια και στα δύο πειράματα.
 
 - specjeng
 
-1) `sim_seconds                                  0.705640                       # Number of seconds simulated`
+   1) `sim_seconds                                  0.705640                       # Number of seconds simulated`
 
-2) `sim_seconds                                  0.513823                       # Number of seconds simulated`
+   2) `sim_seconds                                  0.513823                       # Number of seconds simulated`
 
-`0.705640 ÷ 0.513823 = 1,373313378`
+   `0.705640 ÷ 0.513823 = 1,373313378`  
 
 Το οποίο απέχει αρκετά από τον λόγο των δύο χρονισμών.
 Αυτό συμβαίνει διότι στο χρόνο εκτέλεσης δεν παίζει ρόλο μόνο το ρολόι του επεξεργαστή, αλλά και ο χρόνος απόκρισης της μνήμης η οποία διατηρείται ίδια και στα δύο πειράματα.
 
+## TODO τι χρονίζεται κ τι όχι
+
+- Όσον αφορά το ενδεχόμενο για την προσθήκη ενός νέου επεξεργαστή, η συχνότητα θα είναι ακριβώς η ίδια με αυτή των επεξεργαστών που ήδη έχουμε. Με άλλα λόγια, χρειάζεται να βάλουμε ακριβώς τα ίδια χαρακτηριστικά στον νέο επεξαργαστή γιατί σε αντίθετη περίπτωση θα έχουμε αστοχία στο υλικό.
+
+- Δεν υπάρχει ιδανικό-τέλειο scaling στον πραγματικό κόσμο. Σε αυτό οφείλονται και οι αποκλίσεις που προκύπτουν.
+
 
 ## Βήμα 2
 
+Το συγκεκριμένο βήμα υλοποιήθηκε με την χρήση δύο scripts. Συγκρεκριμένα, χρησιμοποιήθηκαν scripts που έτρεξαν αρκετές προσομοιώσεις για κάθε ένα benchmark και έπειτα συλλέξαμε τα δεδομένα όπως φαίνεται παρακάτω.
 
 ### specbzip
 
