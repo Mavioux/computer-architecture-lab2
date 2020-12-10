@@ -1,27 +1,23 @@
 1)Κοιτάζοντας το αρχείο config.json για το specbzip καταγράφουμε:
 
-### Μεγέθη των caches
-
+### Μεγέθη των caches  
 - l1
+   + dcache  
 
--- dcache
+            `"size": 65536,` # 64KB
+            `"assoc": 2,`  
+   + icache
 
-`"size": 65536,` # 64KB
-`"assoc": 2,`
-
--- icache
-
-`"size": 32768,` # 32kB
-`"assoc": 2,`
-
+            `"size": 32768,` # 32kB
+            `"assoc": 2,`  
 - l2
 
-`"assoc": 8,`
-`"size": 2097152,` # 2048 kB
+            `"assoc": 8,`
+            `"size": 2097152,` # 2048 kB  
 
 - Μεγεθος cache line
 
-`"cache_line_size": 64,`
+            `"cache_line_size": 64,`
 
 2) Αποτελέσματα για κάθε simulation
 
