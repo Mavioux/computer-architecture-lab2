@@ -12,12 +12,12 @@
     `"assoc": 2,`  
 - l2
 
-            `"assoc": 8,`
-            `"size": 2097152,` # 2048 kB  
+    `"assoc": 8,`
+    "size": 2097152,` # 2048 kB  
 
 - Μεγεθος cache line
 
-            `"cache_line_size": 64,`
+    `"cache_line_size": 64,`
 
 2) Αποτελέσματα για κάθε simulation
 
