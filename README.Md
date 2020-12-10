@@ -4,12 +4,12 @@
 - l1
    + dcache  
 
-            `"size": 65536,` # 64KB
-            `"assoc": 2,`  
+    `"size": 65536,` # 64KB
+    `"assoc": 2,`  
    + icache
 
-            `"size": 32768,` # 32kB
-            `"assoc": 2,`  
+    `"size": 32768,` # 32kB
+    `"assoc": 2,`  
 - l2
 
             `"assoc": 8,`
